@@ -11,14 +11,14 @@ int main()
     cin.ignore();
     for(int i=1;i<=t;i++)
     {
-        float price,count=1;
+        float price,count=0;
          string name;
         cin>>price;
         cin.ignore();
         getline(cin,name);
         for(int j=0;j<name.size();j++)
         {
-            if(isalpha(name[j])&&name[j-1]==' ')
+            if(isalpha(name[j])&&(j==0||name[j-1]==' '))
                 count++;
         }
          total_count+=count;
